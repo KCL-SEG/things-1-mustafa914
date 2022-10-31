@@ -3,4 +3,5 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     name = models.TextField()
-    description = models.TextField
+    description = models.TextField()
+    quantity = models.IntegerField()
