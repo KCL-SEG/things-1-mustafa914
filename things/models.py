@@ -1,7 +1,6 @@
-from django.db.models import Model
+from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-class Thing(Model):
-    name = Model.TextField()
-    description = Model.TextField()
-    quantity = Model.IntegerField()
+class User(AbstractUser):
+    name = models.TextField()
+    description = models.TextField
