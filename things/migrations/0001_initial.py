@@ -16,9 +16,9 @@ class Migration(migrations.Migration):
             name='Thing',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(blank = False, max_length=30, unique=True)),
-                ('description', models.CharField(blank = True, unique = False,max_length=120)),
-                ('quantity', models.PositiveIntegerField(validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(100)])),
+                ('name', models.CharField(unique=True, blank = False, max_length=30)),
+                ('description', models.CharField(unique = False, blank = True,max_length=120)),
+                ('quantity', models.PositiveIntegerField(unique = False, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(100)])),
             ],
         ),
     ]
